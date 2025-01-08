@@ -1,0 +1,25 @@
+{
+  "name": "Python Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "customizations": {
+      "vscode": {
+          "settings": {
+              "python.defaultInterpreterPath": "/usr/local/bin/python",
+              "python.linting.enabled": true,
+              "python.linting.pylintEnabled": true,
+              "python.formatting.provider": "black",
+              "python.analysis.typeCheckingMode": "basic"
+          },
+          "extensions": [
+              "ms-python.python",
+              "ms-python.vscode-pylance",
+              "ms-toolsai.jupyter",
+              "njpwerner.autodocstring",
+              "ms-python.isort",
+              "GitHub.copilot",
+              "GitHub.copilot-chat"
+          ]
+      }
+  },
+  "postCreateCommand": "curl -sSL https://install.python-poetry.org | POETRY_VERSION=1.4.2 python3 -"
+}
